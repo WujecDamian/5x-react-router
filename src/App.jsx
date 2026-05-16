@@ -9,8 +9,10 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="profile">Profile page</Link>
+            <Link to="profile/:name">Profile page</Link>
           </li>
+          <Link to="about">About us</Link>
+          <li></li>
         </ul>
       </nav>
     </div>
