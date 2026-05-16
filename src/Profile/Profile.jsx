@@ -1,4 +1,6 @@
-import { Outlet } from "react-router";
+import Spinach from "../RandomComponents/Spinach";
+import DefaultProfile from "./DefaultProfile";
+import { Link } from "react-router";
 
 const Profile = () => {
   return (
@@ -7,7 +9,18 @@ const Profile = () => {
       <p>So, how are you?</p>
       <hr />
       <h2>The profile visited is here:</h2>
-      <Outlet />
+      {name === "popeye" ? (
+        <Spinach></Spinach>
+      ) : name === "spinach" ? (
+        <Spinach></Spinach>
+      ) : (
+        <DefaultProfile></DefaultProfile>
+      )}
+      <span>
+        <Link to="/">
+          <i>{"<- Go back"}</i>
+        </Link>
+      </span>
     </div>
   );
 };
